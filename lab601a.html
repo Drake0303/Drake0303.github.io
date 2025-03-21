@@ -116,6 +116,16 @@
         console.log("clicked on the toggle photo button");
         $("#authorphoto").fadeToggle(900, "swing");
       }); 
+
+      $(document).ready(function() {
+        //run this when voteforwildlife button is clicked
+        $("#Voteforwildlife").click( function() {
+          // if someone clicks on Vote for wildlife, this runs!
+          console.log("someone clicked on button Votforwildlife.");
+          
+          $("#hidden_text").text("Use 5calls App to find a script and locate your reps contact info to advocate for wildlife and public lands! It's free and easy.");
+        });   
+      
     });
   </script>
 
