@@ -116,6 +116,15 @@
         console.log("clicked on the toggle photo button");
         $("#authorphoto").fadeToggle(900, "swing");
       });
+
+// add hidden message
+      $(document).ready(function() {
+        $("#appear").click( function() {
+          // if someone clicks on appear, this runs!
+          console.log("someone clicked on button appear.");
+          $("#hidden_text").text("Stand up for wildlife. Keep it wild!.");
+        });
+      
     });
   </script>
 
@@ -191,7 +200,7 @@
     
     
     Learn more about the <a href = "https://www.iucnredlist.org">IUCN Red List of Threatened Species</a>
-               
+           <div id ="appear">Click here to see the hidden text!</button>    
     </div>
   </body>
 </html>
