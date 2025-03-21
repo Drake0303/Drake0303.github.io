@@ -68,44 +68,52 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
     $(document).ready(function(){
+      console.log("started JavaScript");
       // do this when clicktolearn1 button for IUCN status
        $("#clicktolearn1").click(function() {
          //run this when IUCN status button is clicked
+          console.log("clicked on the 1st button");
          $("#div_ctr1").html("Stable, NT, CD");
        });
 
        // do this when clicktolearn2 button for IUCN status
        $("#clicktolearn2").click(function() {
          //run this when IUCN status button is clicked
+         console.log("clicked on the 2nd button");
          $("#div_ctr2").html("Decreasing, LC");
        });
       
        // do this when clicktolearn3 button for IUCN status
        $("#clicktolearn3").click(function() {
          //run this when IUCN status button is clicked
+         console.log("clicked on the 3rd button");
          $("#div_ctr3").html("Decreasing, LC");
        });
       
       // do this when clicktolearn4 button for IUCN status
        $("#clicktolearn4").click(function() {
          //run this when IUCN status button is clicked
+         console.log("clicked on the 4th button");
          $("#div_ctr4").html("Decreasing, EN");
        });
 
       // do this when clicktolearn5 button for IUCN status
        $("#clicktolearn5").click(function() {
          //run this when IUCN status button is clicked
+         console.log("clicked on the 5th button");
          $("#div_ctr5").html("Increasing, LC");
        });
 
       // do this when clicktolearn6 button for IUCN status
        $("#clicktolearn6").click(function() {
          //run this when IUCN status button is clicked
+         console.log("clicked on the 6th button");
          $("#div_ctr6").html("Stable, LC");
        });
 
       // toggle the photo on and off using
       $("#togglephoto").click(function() {
+        console.log("clicked on the toggle photo button");
         $("#authorphoto").fadeToggle(900, "swing");
       });
     });
