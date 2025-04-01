@@ -4,9 +4,6 @@
     <title>Hangman!</title>
   
     <style>
-      #guesses {text-alignment: center;
-        
-      }
       
       #alphabet { margin: auto;
                  font-size: 155%;
@@ -14,19 +11,21 @@
                 padding: 20px;
                   }
       
-      #word { text-alignment:center; 
-        margin: auto;
+      #word {  margin: auto;
               font-size: 160%;
               font-family: sans-serif;
               <b><b>;
               padding: 20px;
              
             }
-        #info { text-alignment:center;
+        #info {
               padding: 20px; 
               color: Wheat;
               font-family: sans-serif;
               background-color: Saddlebrown; 
+        }
+          .guesses { text-align:center;
+          
             }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -75,7 +74,7 @@
 
                       // reduce the number of remaining tries by 1
                       tries = tries - 1;
-                      $("#guesses").text("Attempts, left: " + tries);
+                      $("#guesses").text("Guesses, left: " + tries);
 
 
                       // are they out of tries? then they lost!
