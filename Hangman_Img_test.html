@@ -20,12 +20,12 @@
         width: 500px;
       }
         #coyote {
+        display: none; /* Hide the image by default */
         height: auto;
         width: 500px;
         border: 3px solid #A0522D;
         border-radius: 0;
         padding: 2px;
-        display: block;
         margin: auto;
           
         }
@@ -126,10 +126,10 @@
                       if (!blank.includes("-")) {
                          gameWon = true;
                         $("#info").text("You WON! Great Job!!");
+                        // Show the winner image
+                        $(#coyote").show();
                         
                       }
-                        
-
                     }
 
                     // add the letter to letters already tried
