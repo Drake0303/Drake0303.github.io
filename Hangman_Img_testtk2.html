@@ -45,6 +45,12 @@
        margin: auto;
        
      }
+
+    #coyote {
+    disyplay: none; /* Hide the image by default*/
+    text-align: center;
+    margin-top 20px;
+    }
      
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -128,6 +134,8 @@
                       if (!blank.includes("-")) {
                          gameWon = true;
                         $("#info").text("You WON! Great Job!!");
+                        // Show the winner image and message
+                        $("#Coyote").show();
                          
                       }
                       
