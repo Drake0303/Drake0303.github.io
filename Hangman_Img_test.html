@@ -12,13 +12,23 @@
                  font-family: sans-serif;
                 padding: 20px;
                   }
-    
+      #photo {
+        background-color: #EEE8AA;
+        margin-right: auto;
+        margin-left: 0;
+        float: right;
+        width: 500px;
+        margin: auto;
       }
+      
         #coyote {
-        display: none; /* Hide the image by default */
-       text-align: center;
-          margin-top: 20px;
-          
+        height: auto;
+        width: 500px;
+        border: 3px solid #A0522D;
+        border-radius: 0;
+        padding: 2px;
+        margin: auto;
+
         }
       
       #word {  margin: auto;
@@ -112,7 +122,7 @@
                         console.log("blank is ", blank);
                       }
 
-                      
+                      {
                       // check if the player has won the game
                       if (!blank.includes("-")) {
                          gameWon = true;
