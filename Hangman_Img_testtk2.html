@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html lang="en">
   <head>
     <title>Hangman!</title>
-  
-    <style>
-      
+    
+  <style>
+       body {width: 100%;}
+        
       #alphabet { margin: auto;
                 background-color: wheat;
                  font-size: 155%;
@@ -12,22 +13,39 @@
                 padding: 20px;
                   }
       
-      #word {  margin: auto;
-              font-size: 160%;
-              font-family: sans-serif;
-              <b><b>;
-              padding: 20px;
-             
-            }
+      #word {  
+        margin: auto;
+        font-size: 160%;
+        font-family: sans-serif;
+        <b><b>;
+        padding: 20px;
+        }
+    
         #info {
               padding: 20px; 
               color: Wheat;
               font-family: sans-serif;
               background-color: Saddlebrown; 
         }
-          
-          
-            
+
+    #photo {
+      background-color: auto;
+      width: 500px;
+      border: 3px solid #A0522D;
+      border-radius: 0;
+      padding: 2px;
+      display: block;
+      margin: auto;
+    }
+
+     #coyote{
+       height: auto;
+       width: 500px;
+       padding: 2px;
+       margin: auto;
+       
+     }
+     
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
@@ -110,12 +128,12 @@
                       if (!blank.includes("-")) {
                          gameWon = true;
                         $("#info").text("You WON! Great Job!!");
-                        
+                         
                       }
-                        
-
+                      
                     }
-
+                    
+                    
                     // add the letter to letters already tried
                     triedLetters = triedLetters + letter;
                     console.log("triedLetters is ", triedLetters);
@@ -124,7 +142,7 @@
                      }
               });
 
-             // 
+              //
            
          });
       
@@ -163,5 +181,11 @@
      <span class="letter" id="y">y</span>
      <span class="letter" id="z">z</span>  
      </div>
-  </body>
+    
+   <div id = "photo">
+    <Img id = "coyote" src ="Coyote.jpg" />
+     
+   </div>
+    
+      </body>
 </html>
