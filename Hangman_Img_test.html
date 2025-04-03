@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <title>Hangman!</title>
+    
   <style>
        body {width: 100%;}
         
@@ -18,8 +19,7 @@
         margin-left: auto;
         float: right;
         width: 350px;
-    
-      }
+   }
       
         #coyote {
         height: auto;
@@ -123,15 +123,17 @@
                         console.log("blank is ", blank);
                       }
 
-                      {
+                      
                       // check if the player has won the game
                       if (!blank.includes("-")) {
                          gameWon = true;
                         $("#info").text("You WON! Great Job!!");
                          
                       }
-                      }
-                      {
+                      
+                    }
+                    
+                    
                     // add the letter to letters already tried
                     triedLetters = triedLetters + letter;
                     console.log("triedLetters is ", triedLetters);
@@ -181,11 +183,9 @@
      </div>
     
    <div id ="photo">
-    <Img id = "coyote" src = "Coyote.jpg"/>
+    <Img id = "coyote" src ="Coyote.jpg"/>
      
    </div>
-     
-
-     
-  </body>
+    
+      </body>
 </html>
