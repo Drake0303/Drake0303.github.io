@@ -127,12 +127,10 @@
                       if (!blank.includes("-")) {
                          gameWon = true;
                         $("#info").text("You WON! Great Job!!");
-                        // Show the winner image
-                        $("#coyote").show();
-                        
+                         
                       }
                     }
-
+                      {
                     // add the letter to letters already tried
                     triedLetters = triedLetters + letter;
                     console.log("triedLetters is ", triedLetters);
@@ -141,7 +139,7 @@
                      }
               });
 
-             // 
+              
            
          });
       
@@ -181,7 +179,7 @@
      <span class="letter" id="z">z</span>  
      </div>
     
-   <div id="coyote">
+   <div id ="photo"></div>
     <Img id ="coyote" src = "Coyote.jpg."/>
    </div>
      
