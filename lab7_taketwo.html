@@ -24,12 +24,10 @@
 <script>
    var map = L.map('map').setView([39.92119, -105.22382], 10);
    var marker = L.marker([39.92119, -105.22382]).addTo(map);
-   var circle = L.circle([39.92195, -105.22205]) {
-      color: 'blue',
-      fillColor: '#f03',
-      fillopacity: 0.5,
-         radius: 500})addTo(map);
-   
+  
+   L.circle([39.92195, -105.22205], 8046.72,{color: "red", weight:  
+8,fillColor:"blue"}).addTo(map);
+  
 
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
