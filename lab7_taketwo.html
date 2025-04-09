@@ -26,9 +26,14 @@
    var marker = L.marker([39.92119, -105.22382]).addTo(map);
 
   
-   
    L.circle([39.92195, -105.22205], 1207.08,{color: "red", weight:  
 3,fillColor:"blue"}).addTo(map);
+
+   var polygon = L.polygon([
+      [39.91121, -105.18314],
+      [39.90521, -105.16314],
+      [39.91221, -105.15014]
+      ]).addTo(map) ;
   
 
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
