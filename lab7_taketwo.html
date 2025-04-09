@@ -24,8 +24,14 @@
 <script>
    var map = L.map('map').setView([39.92119, -105.22382], 10);
    var marker = L.marker([39.92119, -105.22382]).addTo(map);
-  
-   L.circle([39.92195, -105.22205], 1609.34,{color: "red", weight:  
+
+   var polygon = L.polygon([
+      [39.92119, -105.22381]
+      [39.92113, -105.22375]
+      [39.92119, -105.22335]
+      ]).addTo(map);
+   
+   L.circle([39.92195, -105.22205], 1207.08,{color: "red", weight:  
 3,fillColor:"blue"}).addTo(map);
   
 
