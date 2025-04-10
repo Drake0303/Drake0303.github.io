@@ -27,12 +27,9 @@
    var mymarker = L.marker([39.92119, -105.22382], {title: "Meet Up Loc."}).addTo(map);
    var mymarker2 = L.marker([39.91818, -105.21128], {title: "Colony SW Ext."}).addTo(map);
   
-                                                              
-   
   
    L.circle([39.92195, -105.22205], 1100.00,{color: "red", weight:  
 3,fillColor:"blue"}).addTo(map).bindPopup("Generalized Translocation Area");
-   
    
    
 
@@ -40,7 +37,7 @@
       [39.91121, -105.18314],
       [39.91096, -105.18328],
       [39.91056, -105.18099]
-      ]).addTo(map); 
+      ]).addTo(map).bindPopup("Past translocations"); 
   
    var popup = L.popup()
       .setLatLng([39.92119, -105.22382])
