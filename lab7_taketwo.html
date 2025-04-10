@@ -22,6 +22,7 @@
 
 <div id="map" style="width: 600px; height: 400px"></div>
 <script>
+   
    var map = L.map('map').setView([39.92119, -105.22382], 10);
    var marker = L.marker([39.92119, -105.22382]).addTo(map);
    var marker = L.marker([39.91818, -105.21128]).addTo(map);
@@ -44,14 +45,14 @@
       .setContent("One Time Meet Up Spot")
       .openOn(map);
 
-   circle.bindPopup("General translocation area.");
+  
    
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map) ;
 
-     circle.bindPopup("General translocation area.");
+   
    
 </script>
       <div id="map"></div>
