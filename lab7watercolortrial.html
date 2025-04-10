@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Leaflet Lab7</title>
+
+   <!-- link to the leaflet stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+
+   <style>
+      #map { height: 180px; }
+   </style>
+
+</head>
+   <body>
+   <!-- Make sure you put this AFTER Leaflet's CSS -->
+   
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+
+<div id="map" style="width: 600px; height: 400px"></div>
+<script>
+   
+   var map = L.map('map').setView([39.92119, -105.22382], 10);
+   var mymarker = L.marker([39.92119, -105.22382], {title: "Meet Up Loc."}).addTo(map);
+   var mymarker2 = L.marker([39.91818, -105.21128], {title: "Colony SW Ext."}).addTo(map);
+  
+  
+   L.circle([39.92195, -105.22205], 1100.00,{color: "red", weight:  
+3,fillColor:"blue"}).addTo(map).bindPopup("Generalized Translocation Area");
+   
+   
+
+   var polygon = L.polygon([
+      [39.91121, -105.18314],
+      [39.91096, -105.18328],
+      [39.91056, -105.18099]
+      ]).addTo(map).bindPopup("Past translocations"); 
+  
+   var popup = L.popup()
+      .setLatLng([39.92119, -105.22382])
+      .setContent("One Time Meet Up Spot")
+      .openOn(map);
+
+    
+   
+   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map) ;
+
+   
+   
+</script>
+      <div id="map"></div>
+   </body>
+</html>
+  
