@@ -18,12 +18,14 @@
    
  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-     crossorigin="">< script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
+     crossorigin="">
+    
+   <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.2.4"></script>
        
 
 <div id="map" style="width: 600px; height: 400px"></div>
 <script>
-   
+   var layer = new L.StamenTileLayer('https://.tile.maps.stamen.com/watercolor/{z}/{x}/{y}.png');map.addlayer(layer);
    var map = L.map('map').setView([39.92119, -105.22382], 10);
    var mymarker = L.marker([39.92119, -105.22382], {title: "Meet Up Loc."}).addTo(map);
    var mymarker2 = L.marker([39.91818, -105.21128], {title: "Colony SW Ext."}).addTo(map);
@@ -47,7 +49,7 @@
 
     
    
-   L.StamenTileLayer("watercolor").('https://tile.stamen.com/{z}/{x}/{y}.png'); map.addLayer; 
+ 
 
 
    
