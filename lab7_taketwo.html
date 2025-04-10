@@ -25,7 +25,7 @@
    
    var map = L.map('map').setView([39.92119, -105.22382], 10);
    var mymarker = L.marker([39.92119, -105.22382]).addTo(map);
-   var marker = L.marker([39.91818, -105.21128]).addTo(map);
+   var mymarker2 = L.marker([39.91818, -105.21128], {title: "Colony SW Ext.", alt: "Year 3"}).addTo(map);
                                                               
    
   
@@ -45,7 +45,7 @@
       .setContent("One Time Meet Up Spot")
       .openOn(map);
 
-  
+  var mymarker2 = 
    
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
