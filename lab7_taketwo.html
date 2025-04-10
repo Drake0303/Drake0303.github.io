@@ -35,11 +35,17 @@
       [39.91056, -105.18099]
       ]).addTo(map) ;
   
-
+var popup = L.popup()
+   .setLatLng([39.92119, -105.22382])
+   .setContent("One Time Meet Up Spot")
+   .openOn(map);
+   
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map) ;
+
+   
 </script>
       <div id="map"></div>
    </body>
