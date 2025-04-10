@@ -24,7 +24,16 @@
 <script>
    var map = L.map('map').setView([39.92119, -105.22382], 10);
    var marker = L.marker([39.92119, -105.22382]).addTo(map);
-   var marker = L.marker([39.91818, -105.21128]).addTo(map);
+   var marker = L.marker([39.91818, -105.21128]).addTo(map); {
+      radius:30,
+         fillOpacity:0.5,
+         fillColor: '#ff8f00',
+         color: '#795548',
+         innerRadius:7,
+         numberOfSides:4,
+         rotation:10
+   });
+   
   
    L.circle([39.92195, -105.22205], 1100.00,{color: "red", weight:  
 3,fillColor:"blue"}).addTo(map);
