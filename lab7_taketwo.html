@@ -30,25 +30,28 @@
   
    L.circle([39.92195, -105.22205], 1100.00,{color: "red", weight:  
 3,fillColor:"blue"}).addTo(map);
-   circle.bindPopup("General vicinity of translocation area and nearby infastructure.");
+   
    
 
    var polygon = L.polygon([
       [39.91121, -105.18314],
       [39.91096, -105.18328],
       [39.91056, -105.18099]
-      ]).addTo(map) ;
+      ]).addTo(map);
   
-var popup = L.popup()
-   .setLatLng([39.92119, -105.22382])
-   .setContent("One Time Meet Up Spot")
-   .openOn(map);
+   var popup = L.popup()
+      .setLatLng([39.92119, -105.22382])
+      .setContent("One Time Meet Up Spot")
+      .openOn(map);
+
+   circle.bindPopup("General translocation area.");
    
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map) ;
 
+     circle.bindPopup("General translocation area.");
    
 </script>
       <div id="map"></div>
