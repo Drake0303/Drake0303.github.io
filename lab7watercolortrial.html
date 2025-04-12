@@ -32,6 +32,10 @@
    L.circle([39.92195, -105.22205], 1100.00,{color: "red", weight:  
 3,fillColor:"blue"}).addTo(map).bindPopup("Generalized Translocation Area");
    
+    L.tileLayer('https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png'), {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map) ;
    
 
    var polygon = L.polygon([
@@ -45,11 +49,6 @@
       .setContent("One Time Meet Up Spot")
       .openOn(map);
    
-
-    L.tileLayer('https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png'), {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map) ;
  
  var laryer = new L.TileLayer('https://tile.thunderforest.com/landscape/{z}/{x}/{y}.png');map.addLayer(layer);  
     
