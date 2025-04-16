@@ -66,14 +66,10 @@
 					 "Humanitarian OSM" : HOTOSMTiles,
 				        "OpenTopoMap" : OpenTopoMap};
 					
-	
-		
 
 		// the control let's the user turn on / off layers -- ##3 here
-			var layerControl = L.control.layers(baseMaps, null).addTo(map);
+		  var layerControl = L.control.layers(baseMaps, null).addTo(map);
 			
-			
-		
 
 		// let's add the Denver ACS data -- ##4 here
 		$.getJSON('./acs_denver_2021.geojson', function(data) {
@@ -87,16 +83,16 @@
 			 layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
 		});
 
-		// let's try to add some remote DRCOG data
+		// let's try the Park PicnicAreas data
 		$.getJSON('https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_PARK_PICNICAREAS_P/FeatureServer/90/query?outFields=*&where=1%3D1&f=geojson', function(data) {
 			// convert the file into a layer
-			picnicareasLayer = L.geoJSON(data).addTo(map);
+			prakspicnicareasLayer = L.geoJSON(data).addTo(map);
 			// move the map to the area of the data
-			map.panTo(picnicareasLayer.getBounds().getCenter());
+			map.panTo(parkpicnicareasLayer.getBounds().getCenter());
 			
 			newLayer = L.geoJSON(data);
 			// add the layer to the layer control
-			layerControl.addOverlay(newLayer, "Picnic Areas");
+			layerControl.addOverlay(newLayer, "Park Picnic Areas");
 		});
 
 
