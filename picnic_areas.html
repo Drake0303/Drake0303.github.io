@@ -70,7 +70,8 @@
 					
 
 		// the control let's the user turn on / off layers -- ##3 here
-		  var layerControl = L.control.layers(baseMaps, overlaylayers, null).addTo(map);
+		  var layerControl = L.control.layers(baseMaps, null).addTo(map);
+		var layerControl = L.control.layers (overlaylayers, null).addTo(map);
 			
 
 		// let's add the Denver ACS data -- ##4 here
@@ -90,7 +91,6 @@
 			
 			prakspicnicareasLayer = L.geoJSON(data).addTo(map);
 			newLayer = L.geoJSON(data);
-			// add the layer to the layer control
 			layerControl.addOverlay(newLayer, "Park Picnic Areas");
 		});
 
