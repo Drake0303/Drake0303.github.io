@@ -87,7 +87,7 @@
 		$.getJSON('https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_PARK_PICNICAREAS_P/FeatureServer/90/query?outFields=*&where=1%3D1&f=geojson', function(data) {
 			
 			prakspicnicareasLayer = L.geoJSON(data).addTo(map);
-			map.panTo(parkpicnicareasLayer.getBounds().getCenter());
+			
 			newLayer = L.geoJSON(data);
 			// add the layer to the layer control
 			layerControl.addOverlay(newLayer, "Park Picnic Areas");
