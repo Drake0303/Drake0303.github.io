@@ -76,13 +76,13 @@
 
 			function style1 (feature) {
 			  d = feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT;
-				answer = d > 30 ? '#f7fcfd' :
-					d > 20 ? '#e0ecf4' :
-					d > 15 ? '#bfd3e6' :
-					d > 10 ? '#9ebcda' :
-					d > 5 ? '#8c96c6' :
-					d > 3 ? '#8c6bb1':
-					d > 1 ? '#88419d' :
+				answer = d > 525 ? '#f7fcfd' :
+					d > 325 ? '#e0ecf4' :
+					d > 125 ? '#bfd3e6' :
+					d > 75 ? '#9ebcda' :
+					d > 50? '#8c96c6' :
+					d > 25 ? '#8c6bb1':
+					d > 5 ? '#88419d' :
 					              '#6e016b';
 
 				styleReturn = {
