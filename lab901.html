@@ -96,17 +96,18 @@
 				return styleReturn;
 					
 					
-					
-		
-				
-				
+						
 			}
 		
 		// let's add the Denver ACS data -- ##4 here
 		$.getJSON('./acs_denver_2021.geojson', function(data) {
 			// covert the file into a layer
 			acsDenver2021Layer = L.geoJSON(data,
-						       { style: style1 }).addTo(map);
+						       { style: style1,
+						       onEachFeature : function(feature, layer) {
+							       layer.bindPopup("Female Head of HouseHold, No Husband Present: " +
+										feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT);
+						       }).addTo(map);
 			
 			// move the map to the area of the data
 			map.panTo(acsDenver2021Layer.getBounds().getCenter());
