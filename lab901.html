@@ -77,14 +77,14 @@
 		// define a function called style my choropleth map
 			function style1 (feature) {
 			  d = feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT;
-				answer = d > 525 ? '#6e016b' :
-					d > 450 ? '#88419d' :
-					d > 375 ? '#8c6bb1' :
-					d > 300 ? '#8c96c6' :
-					d > 225 ? '#9ebcda' :
-					d > 150 ? '#bfd3e6':
-					d > 75 ? '#e0ecf4' :
-					              '#f7fcfd';
+				answer = d > 525 ? '#91003f' :
+					d > 450 ? '#ce1256' :
+					d > 375 ? '#e7298a' :
+					d > 300 ? '#df65b0' :
+					d > 225 ? '#c994c7' :
+					d > 150 ? '#d4b9da':
+					d > 75 ? '#e7e1ef' :
+					              '#f7f4f9';
 
 				styleReturn = {
 					fillColor : answer,
