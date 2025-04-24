@@ -66,14 +66,10 @@
 					"Humanitarian OSM" : HOTOSMTiles,
 					"OpenTopoMap" : OpenTopoMap };
 
-	
-	
 		// the control let's the user turn on / off layers -- ##3 here
 			var layerControl = L.control.layers(baseMaps, null).addTo(map);
 		
-
 		// define a function called style my choropleth map
-
 			function style1 (feature) {
 			  d = feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT;
 				answer = d > 525 ? '#6e016b' :
@@ -93,21 +89,18 @@
 					dashArray : '3',
 					fillOpacity : 0.7
 				};
-				return styleReturn;
-					
-					
-						
+				return styleReturn;						
 			}
+		
 		
 		// let's add the Denver ACS data -- ##4 here
 		$.getJSON('./acs_denver_2021.geojson', function(data) {
 			// covert the file into a layer
 			acsDenver2021Layer = L.geoJSON(data,
-						       { style: style1,
-						       onEachFeature : function(feature, layer) {
-							       layer.bindPopup("Female Head of HouseHold, No Husband Present: " +
-										feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT);
-						       }).addTo(map);
+						{style:style1,
+						onEachFeature: function(feature, layer) {
+							       layer.bindPopup("Female Head of HouseHolder No Husband Present: " + feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT);
+						       }}).addTo(map);
 			
 			// move the map to the area of the data
 			map.panTo(acsDenver2021Layer.getBounds().getCenter());
