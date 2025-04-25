@@ -20,18 +20,18 @@
 		
 		#map { width:100%; height: 70%; }
 		
-		h1 { color: #3293a8;
+		h1 { color: #225ea8;
 		     font-family: "Garamond", serif;
 		     font-size: 25px;
 		    }
 
-		h2 { color: #6e016b;
+		h2 { color: #0c2c84;
 		     font-family: "Garamond", serif;
 		     fontt-size: 20px;
 		   }
 		
 		p { font: serif 10px;
-		    color: #3293a8;
+		    color: #1d91c0;
 		  }
 		
 		#header {
@@ -77,14 +77,14 @@
 		// define a function called style my choropleth map
 			function style1 (feature) {
 			  d = feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT;
-				answer = d > 525 ? '#91003f' :
-					d > 450 ? '#ce1256' :
-					d > 375 ? '#e7298a' :
-					d > 300 ? '#df65b0' :
-					d > 225 ? '#c994c7' :
-					d > 150 ? '#d4b9da':
-					d > 75 ? '#e7e1ef' :
-					              '#f7f4f9';
+				answer = d > 525 ? '#0c2c84' :
+					d > 450 ? '#225ea8' :
+					d > 375 ? '#1d91c0' :
+					d > 300 ? '#41b6c4' :
+					d > 225 ? '#7fcdbb' :
+					d > 150 ? '#c7e9b4':
+					d > 75 ? '#edf8b1' :
+					              '#ffffd9';
 
 				styleReturn = {
 					fillColor : answer,
