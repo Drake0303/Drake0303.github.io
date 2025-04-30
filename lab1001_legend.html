@@ -140,7 +140,7 @@
 			labels = ['0 - 50', '50 - 150', '150 - 250', '250 - 350', '350 - 450', '450 - 550', '550+'];
 		// note that thesevalues were changed to match your classes
 
-		div.innerHTML = '<h2># of Female HHLDRs</h>';
+		div.innerHTML = '<h1>Pop. of Female HHLDRs</h>';
 			//loop through our density intervals and generate a label with a colored square for each interval
 			for (var i = 0; i < colors.length; i++) {
 			    div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + labels[i] + '<br>';
@@ -162,7 +162,7 @@
 
 <div id="header">
 	<h1><a href="https://www.census.gov/programs-surveys/acs">Denver 2021 American Community Survey (Census) Data: </a></h1>
-	<h2>Female Householder No Husband Present</h2>
+	<h2>The Number of Female Householders With No Husband Present</h2>
 	<p>Data from <a href="https://opendata-geospatialdenver.hub.arcgis.com/maps/619c7f836b6e4188b0e0f0458aecba26">Denver Open Data Catalog</a></p>
 </div>
 <div id="map"></div>
