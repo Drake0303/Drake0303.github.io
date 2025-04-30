@@ -117,7 +117,7 @@
 			acsDenver2021Layer = L.geoJSON(data,
 						{style:style1,
 						onEachFeature: function(feature, layer) {
-							       layer.bindPopup("Female HouseHolder No Husband Present: " + feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT);
+							       layer.bindPopup("Female HouseHolders No Husband Present: " + feature.properties.FEMALE_HHLDR_NO_HSBND_PRESENT);
 						       }}).addTo(map);
 			
 			// move the map to the area of the data
@@ -137,10 +137,11 @@
 		legend.onAdd = function(map) {
 			var div = L.DomUtil.create('div', 'info legend');
 			colors = ['#f6eff7','#d0d1e6','#a6bddb','#67a9cf','#3690c0','#02818a','#016450'];
-			labels = ['0 - 50', '50 - 150', '150 - 250', '250 - 350', '350 - 450', '450 - 550', '550+'];
+			labels = ['0 - 50', '50 - 150', '150 - 250', '250 - 350', '350 - 450', '450 - 550', '550 & Up'];
 		// note that thesevalues were changed to match your classes
 
-		div.innerHTML = '<h3>Pop. of Female HHLDRs</h>';
+		div.innerHTML = '<h3>Pop. of Female HHLDRs</h>', '<h4>No Husband Present</h>';
+			
 			//loop through our density intervals and generate a label with a colored square for each interval
 			for (var i = 0; i < colors.length; i++) {
 			    div.innerHTML += '<i style="background:' + colors[i] + '"></i> ' + labels[i] + '<br>';
