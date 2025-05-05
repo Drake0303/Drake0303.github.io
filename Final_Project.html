@@ -3,11 +3,34 @@
 <html>
 <head>
 <title>Web Mapping Final Project</title>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+  crossorigin=""/>
+
+  <!-- Make sure you put this AFTER leaflet's CSS -->
+  <script scr="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+
+  
+  <style>
+    #map { height: 180px; }
+  </style>
+  
 </head>
 <body>
   
-<h1>The Underdog: <i>Cynomys spp.</i></h1>
-<p>The original range of the prairie dog once stretched from Canada to Mexico including eleven U.S. states. It had been estimated over 5 billion prairie dogs roamed the great plains before 1800.</p>
+<h1>National Grasslands</h1>
+<p>National Grasslands are the second largest component of the National Forest System.</p>
+  <p>National Grasslands are situated in thirteen states</p>
+  <p>And nine national grasslands consisting of 3,161,771 acres of federal land are in the Great Plain states of Colorado, North Dakota, South Dakota, and Wyoming which alone make up 82% of the total national grassland acreage.
+  <brk></brk>
 
+    
+
+  <div id="map"></div>
+  
 </body>
 </html>
