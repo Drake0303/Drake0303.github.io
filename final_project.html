@@ -14,24 +14,25 @@
 
 </head>
    
-   <body>
+<body>
+ <div id="map" style="width: 600px; height: 400px"></div>
+  
+<script>
 
 <h1>National Grasslands</h1>
 <p>National Grasslands are the second largest component of the National Forest System.</p>
 <p>National Grasslands are situated in thirteen states</p>
 <p>And nine national grasslands consisting of 3,161,771 acres of federal land are in the Great Plain states of Colorado, North Dakota, South Dakota, and Wyoming which alone make up 82% of the total national grassland acreage.
-<brk></brk>
 
-  <!-- Make sure you put this AFTER leaflet's CSS -->
+<!-- Make sure you put this AFTER leaflet's CSS -->
       
   <script scr="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
 
-  <div id="map" style="width: 600px; height: 400px"></div>
-  <script>
+
      
-      var map = L.map('map').setView([47.0990, -103.5370], 13);
+   var map = L.map('map').setView([47.0990, -103.5370], 13);
  
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
