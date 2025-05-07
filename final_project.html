@@ -31,7 +31,10 @@
 
    var map = L.map('map').setView([41.023008, -102.107148], 5);
    var mymarker = L.marker([37.6552239, -103.5646914]).addTo(map);
-   
+   var popup = L.popup()
+        .setLatLng([])
+        .setContent("Comanche National Grassland")
+        .openon(map);
    
    
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
