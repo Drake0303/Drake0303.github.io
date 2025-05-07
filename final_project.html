@@ -15,9 +15,9 @@
 </head>
    <body>
 <h1>National Grasslands</h1>
-<p>National Grasslands are the second largest component of the National Forest System following the National Forests.</p>
-<p>National Grasslands are found from Canada to Mexico and includes thirteen states</p>
-<p>Nine national grasslands consisting of 3,161,771 acres of federal land are in the Great Plain states of Colorado, North Dakota, South Dakota, and Wyoming which alone make up 82% of the total national grassland acreage.
+<p>National Grasslands are the second largest component of the National Forest System following the National Forests as First.</p>
+<p>National Grasslands are found streching from Canada to Mexico and includes thirteen states</p>
+<p>Nine national grasslands consisting of 3,161,771 acres of federal land are located in the Great Plain states of Colorado, North Dakota, South Dakota, and Wyoming which alone make up 82% of the total national grassland acreage.
 
    <!-- Make sure you put this AFTER Leaflet's CSS -->
    
@@ -30,7 +30,9 @@
  
 
    var map = L.map('map').setView([41.023008, -102.107148], 5);
- 
+   var mymarker = L.marker([37.6552239, -103.5646914]).addTo(map);
+   
+   
    
    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
